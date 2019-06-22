@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Styles/style.css" />
+    <title>Online Model Ships</title>
+  </head>
+  <body onload="loadContentTools(), myLoad()">
+    <!-- header and navbar -->
+    <div class="header">
+      <div class="topnav" id="myTopnav">
+        <a
+          href="https://www.occre.com/model-ship.html"
+          class="active"
+          style="font-size:1.1em"
+          ><i class="fas fa-anchor"></i
+        ></a>
+        <a href="home.html">Home</a>
+        <a href="indexModels.html">Models</a>
+        <a href="indexTools.html">Tools</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a class="goCart" href="shoppingCart.html">
+          <i class="fas fa-shopping-basket"></i
+          ><span id="cartQty"> 0 Items </span></a
+        >
+      </div>
+    </div>
+
+    <!-- navbar left -->
+    <div class="row">
+      <div class="col-2 menu">
+        <ul>
+          <li id="showDropDownTools">
+            <a href="#">QUICK VIEW <i class="fas fa-caret-down"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- main content -->
+      <div class="col-6 mainContentTools">
+        <h1>Modelling Tools</h1>
+        <!-- first row -->
+        <div class="row content">
+          <!-- <div class="col-4 imgHov">
+            <h5 style="text-align:center;">$name</h5>
+            <a href="#"
+              ><img class="contentImg" src="Images/photos/Albatros/1.jpg" alt=""
+            /></a>
+            <p class="description">
+              $descrS
+            </p>
+            <div class="row content">
+              <div class="price col-9">
+                <span>R 5 999.99</span>
+              </div>
+              <div class="col-3 buy">
+                <a class="buy" href="#"><i class="fas fa-cart-plus"></i></a>
+              </div>
+            </div>
+            <div class="row content">
+              <div class="info col-12">
+                <span>More Info</span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- COLUMN RIGHT FORM -->
+      <div class="col-3 right">
+        <div class="aside rightSide">
+          <h2>Already a member?</h2>
+          <form action="">
+            <a name="login" class="login" href="#">Login</a>
+          </form>
+          <h2>Register</h2>
+          <form action="">
+            <label class="register" for="email">E-Mail:</label><br />
+            <input
+              name="e-mail"
+              class="register"
+              id="email"
+              type="email"
+              placeholder="user@usermail.com"
+            /><br />
+            <label class="register" for="password">Password:</label><br />
+            <input
+              name="password"
+              class="register"
+              id="password"
+              type="password"
+            /><br /><br />
+            <a class="register" href="#">Submit</a><br /><br />
+
+            <h3>Our Weekly Poll</h3>
+            <p>Do you have more then 1 unbuilt kit in you cupboard?</p>
+            <label for="yes">Yes</label>
+            <input
+              style="margin-left:5px"
+              id="yes"
+              type="radio"
+              name="poll"
+            /><br />
+            <label for="no">No</label>
+            <input
+              style="margin-left:9px"
+              id="no"
+              type="radio"
+              name="poll"
+            /><br /><br />
+
+            <a class="register" href="#">Submit</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p><i class="far fa-copyright"></i> Copyright 2019</p>
+    </div>
+
+    <!-- NAVBAR SCRIPT -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="Scripts/script.js"></script>
+  </body>
+</html>

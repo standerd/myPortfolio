@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Styles/style.css" />
+    <title>Online Model Ships</title>
+  </head>
+  <body onload="openProduct(), myLoad()">
+    <!-- header and navbar -->
+    <div class="header">
+      <div class="topnav" id="myTopnav">
+        <a
+          href="http://www.artesanialatina.net"
+          class="active"
+          style="font-size:1.1em"
+          ><i class="fas fa-anchor"></i
+        ></a>
+        <a href="home.html">Home</a>
+        <a href="indexModels.html">Models</a>
+        <a href="indexTools.html">Tools</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a onclick="updateCartItems()" class="goCart" href="shoppingCart.html">
+          <i class="fas fa-shopping-basket"></i><span id="cartQty"> 0 items </span></a>
+      </div>
+    </div>
+
+
+      
+    <!-- navbar left -->
+    <div class="row mainPage">
+      <!-- <h1>HMS Albatros</h1> -->
+      <!-- main content -->
+      <!-- <div class="col-2 leftImg">
+        <div class="left">
+          <img
+            onclick="changeImg(this.src)"
+            class="sideImg"
+            src="Images/photos/Albatros/1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="left">
+          <img
+            onclick="changeImg(this.src)"
+            class="sideImg"
+            src="Images/photos/Albatros/2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="left">
+          <img
+            onclick="changeImg(this.src)"
+            class="sideImg"
+            src="Images/photos/Albatros/3.jpg"
+            alt=""
+          />
+        </div>
+        <div class="left">
+          <img
+            onclick="changeImg(this.src)"
+            class="sideImg"
+            src="Images/photos/Albatros/4.jpg"
+            alt=""
+          />
+        </div>
+      </div> -->
+      
+
+      <!-- <div class="col-8"> -->
+        <!-- first row -->
+
+        <!-- <img
+          class="mainImgClick mainImg"
+          onclick="changeMainImg(this.src)"
+          src="Images/photos/Albatros/1.jpg"
+          alt=""
+        />
+
+        <div class="row">
+          <div class="col-3 details1">
+            <ul>
+              <li>
+                Difficulty: <i class="fas fa-anchor"></i
+                ><i class="fas fa-anchor"></i><i class="fas fa-anchor"></i>
+              </li>
+              <li>Height: 480mm</li>
+              <li>Length: 580mm</li>
+              <li>Width : 280mm</li>
+            </ul>
+          </div>
+          <div class="col-8 details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              voluptatem recusandae deleniti est quo, provident accusantium
+              animi cum consequatur quis autem neque consequuntur reprehenderit.
+              Consequuntur illo aut tempore? In, earum?
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- COLUMN RIGHT FORM -->
+      <!-- <div class="col-2 right">
+        <div class="aside">
+          <h3 style="text-align: center;">Buy Now</h3>
+          <h4>Price: R 3 999.99</h4>
+          <label for="qty">Quantity: </label>
+          <input id="qty" type="number" /><br />
+          <p class="checkStock">In Stock</p>
+          <div class="addCart">
+            <i class="fas fa-cart-plus"></i>
+            <span>Add To Cart</span>
+          </div>
+
+          <div class="pmtOptions">
+            <i class="fab fa-cc-visa icon"></i>
+            <i class="fab fa-cc-amex icon"></i>
+            <i class="fab fa-cc-diners-club icon"></i>
+            <i class="fab fa-cc-paypal icon"></i>
+            <i class="fas fa-money-bill-wave icon"></i>
+            <i class="fab fa-bitcoin icon"></i>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p><i class="far fa-copyright"></i> Copyright 2019</p>
+    </div>
+
+    <!-- NAVBAR AND JQUERY SCRIPT -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="Scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Styles/style.css" />
+    <title>Online Model Ships</title>
+  </head>
+  <body onload="updateCartItems(), myLoad(), animateCart()">
+    <!-- header and navbar -->
+    <div class="header">
+      <div class="topnav" id="myTopnav">
+        <a
+          href="http://www.artesanialatina.net"
+          class="active"
+          style="font-size:1.1em"
+          ><i class="fas fa-anchor"></i
+        ></a>
+        <a href="home.html">Home</a>
+        <a href="indexModels.html">Models</a>
+        <a href="indexTools.html">Tools</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a class="goCart" href="shoppingCart.html">
+          <i class="fas fa-shopping-basket"></i
+          ><span id="cartQty"> 1 item</span></a
+        >
+      </div>
+    </div>
+
+    <!-- navbar left -->
+    <h1 class="cartHead cartIcon">
+      <i id="shopCart" class="fas fa-shopping-cart"></i>
+    </h1>
+    <h1 class="cartHead" id="cartH1">Shopping Cart</h1>
+
+    <div class="row">
+      <!-- main content -->
+
+      <div class="col-8">
+        <table class="cartTable">
+          <thead>
+            <th class="item" colspan="2">Item Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </thead>
+          <tbody class="insertCart">
+            <!-- <tr>
+              <td>
+                <img
+                  style="width:200px;"
+                  src="Images/photos/Albatros/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>HMS VICTORY</td>
+              <td>R 5 999.99</td>
+              <td><input type="number" value="1" /></td>
+              <td>R 5 999.99</td>
+              <td>
+                <a href=""><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+
+        <div class="coupon">
+          <label for="coupon">Have a coupon</label>
+          <input
+            type="text"
+            name="coupon"
+            id="coupValue"
+            placeholder="Enter your coupon code here"
+          />
+          <button id="submitCoupon">Verify Coupon</button>
+        </div>
+        <h6>Working Coupons: coupon50; coupon100; coupon200</h6>
+        <div class="shippingOptions">
+          <h4>Please select your preferred shipping method:</h4>
+          <input
+            value="45.00"
+            class="shipOptions"
+            name="shipping"
+            id="postOffice"
+            type="radio"
+          />
+          <label for="postOffice"> Post Office @ R 45.00</label><br />
+          <input
+            value="99.00"
+            class="shipOptions"
+            name="shipping"
+            id="postNet"
+            type="radio"
+          />
+          <label for="postNet"> Postnet Counter @ R 99.00</label><br />
+          <input
+            value="125.00"
+            class="shipOptions"
+            name="shipping"
+            id="courier"
+            type="radio"
+          />
+          <label for="courier"> Courier to Door @ R 125.00</label><br />
+          <input
+            value="0.00"
+            class="shipOptions"
+            name="shipping"
+            id="collection"
+            type="radio"
+          />
+          <label for="collection"> Collection from Store @ Free</label><br />
+        </div>
+      </div>
+
+      <!-- COLUMN RIGHT FORM -->
+      <div class="col-3 orderSum">
+        <h3 id="sum">Order Summary</h3>
+        <div class="row lineInfo">
+          <div class="col-6 cartTotals">
+            <h4>Total Order:</h4>
+          </div>
+          <div class="col-6 cartTotals">
+            <h4 class="orderTotal">R 0.00</h4>
+          </div>
+        </div>
+        <div class="row lineInfo">
+          <div class="col-6 cartTotals">
+            <h4>Shipping Costs:</h4>
+          </div>
+          <div class="col-6 cartTotals">
+            <h4 id="shippingCost">Please select</h4>
+          </div>
+        </div>
+        <div class="row coup lineInfo">
+          <div class="col-6 cartTotals">
+            <h4>Coupon Discount:</h4>
+          </div>
+          <div class="col-6 cartTotals">
+            <h4 style="margin-left: 0px" id="coupon">R 0.00</h4>
+          </div>
+        </div>
+        <div class="row lineInfo">
+          <div class="col-6 cartTotals">
+            <h4>Total Payable:</h4>
+          </div>
+          <div class="col-6 cartTotals">
+            <h4 id="totalPayable">R 0.00</h4>
+          </div>
+        </div>
+        <div class="pmtMethod">
+          <span style="margin-left: 100px;">Payment Method</span><br /><br />
+          <input class="radio" name="method" type="radio" checked="true" />
+          <label for="method">Credit Card</label>
+          <input class="radio" name="method" type="radio" />
+          <label for="method">EFT</label>
+          <input class="radio" name="method" type="radio" />
+          <label for="method">Cash on Delivery</label>
+        </div>
+        <button onclick="orderNo()" class="confirm">Confirm Order</button>
+      </div>
+      <div class="col-1"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p><i class="far fa-copyright"></i> Copyright 2019</p>
+    </div>
+
+    <!-- NAVBAR SCRIPT -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="Scripts/script.js"></script>
+  </body>
+</html>

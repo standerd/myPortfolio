@@ -1,0 +1,602 @@
+/*-------------------------------------*/
+/*----------GLOBAL SETTINGS------------*/
+/*-------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  color: #ffffff;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+  background: rgb(160, 170, 159);
+  width: 98%;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/*----------------------------*/
+/*-----HOME PAGE SETTINGS-----*/
+/*----------------------------*/
+
+.mainBody {
+  background: url(background1.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  line-height: 18px;
+  color: white;
+}
+
+#welcome {
+  background: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  box-shadow: none;
+  display: none;
+}
+
+#iconImg {
+  width: 100px;
+  margin-left: 15px;
+  position: relative;
+}
+
+/* NAVBAR COLOR SETTING ON OTHER PAGES THEN PRODUCT */
+.active {
+  background: white;
+  color: #000;
+}
+
+/* ------HOME PAGE FORMATTING---------- */
+.landImg {
+  width: 100%;
+  height: 400px;
+  border: 2px solid rgb(201, 210, 200);
+  padding: 3px;
+  opacity: 0.5;
+}
+
+.itemContent {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  padding: 3px;
+}
+
+/*----------------------------*/
+/*----RESPONSIVE SETTINGS-----*/
+/*----------------------------*/
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+
+  .smallHead {
+    display: none;
+  }
+}
+
+/*--------------------------*/
+/*----NAVBAR FORMATTING-----*/
+/*--------------------------*/
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: rgb(201, 210, 200);
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/*-------------------------------------*/
+/*----PRODUCT INDEX PAGE SETTINGS-----*/
+/*------------------------------------*/
+
+.description {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 0.9em;
+  margin-right: 15px;
+}
+
+.infoLink {
+  text-decoration: none;
+  color: #fff;
+}
+
+.infoLink:hover {
+  color: black;
+}
+
+.contentImg {
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .contentImg {
+    width: 32.33%;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .itemContent,
+  .itemHead {
+    display: none;
+  }
+
+  /* HOME PAGE IMAGE TEXT MOVER TO TOP ON RESIZE OF SCREEN */
+  .smallHead {
+    display: block;
+  }
+}
+
+.contentImg:hover {
+  opacity: 0.5;
+}
+
+/*--------------------------*/
+/*----LEFT MENU SETTINGS-----*/
+/*--------------------------*/
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: rgb(160, 170, 159);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu li:hover {
+  background-color: rgb(191, 204, 190);
+}
+
+.aside {
+  background-color: rgb(191, 204, 190);
+  padding: 40px;
+  padding-top: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  height: 400px;
+  border: 1px solid lightgray;
+}
+
+.quick {
+  width: 100px;
+}
+
+.quickListItem {
+  text-align: center;
+  display: none;
+}
+
+.quickListItemT {
+  text-align: center;
+  display: none;
+}
+
+/*--------------------------------------------------*/
+/*----QUICK BUY BUTTON AND PRICE FORMATTING---------*/
+/*-------------------------------------------------*/
+
+.buy,
+.price,
+.info {
+  color: #fff;
+  background: rgb(160, 170, 159);
+  padding: 7px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.price {
+  margin-right: 12px;
+  margin-left: 10px;
+  width: 58%;
+}
+
+.buy a:hover {
+  color: black;
+}
+
+/*---------------------------------------*/
+/*----RIGHT FORM FORMATTING--------------*/
+/*---------------------------------------*/
+
+.register input {
+  text-align: center;
+}
+
+.aside a {
+  text-decoration: none;
+  color: rgb(160, 170, 159);
+  background: #fff;
+  border-radius: 40px;
+  padding: 8px;
+}
+
+.aside a:hover {
+  text-decoration: none;
+  background: rgb(160, 170, 159);
+  color: #fff;
+  border-radius: 40px;
+  padding: 8px;
+}
+
+input {
+  width: 60%;
+}
+
+.rightSide {
+  height: auto;
+  background: rgb(160, 170, 159);
+}
+
+/*---------------------------------------*/
+/*----PRODUCT SPECIFIC PAGE SETTINGS-----*/
+/*---------------------------------------*/
+
+.mainImg {
+  width: 100%;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.left img {
+  width: 100%;
+}
+
+.leftImg img {
+  border: 1px solid lightgray;
+  padding: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.addCart a {
+  border: 1px solid white;
+  background: rgb(191, 204, 190);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: white;
+  margin-left: 3px;
+  border-radius: 10px;
+  padding: 3px 8px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.addCart a:hover {
+  color: black;
+  background: rgb(191, 204, 190);
+  border: 1px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* payment method icons */
+.icon {
+  font-size: 2em;
+  margin-left: 3px;
+  margin-top: 15px;
+  color: white;
+  background: rgb(172, 168, 168);
+  border-radius: 5px;
+}
+
+.pmtOptions {
+  margin-left: 5px;
+}
+
+/* Product spec box formatting */
+.details1 li {
+  list-style: none;
+}
+
+.details,
+.details1 {
+  height: 150px;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.details1 {
+  margin-right: 11px;
+  width: 32%;
+}
+
+/*---------------------------------------*/
+/*----SHOPPING CART PAGE SETTINGS--------*/
+/*---------------------------------------*/
+
+.lineName {
+  text-align: left;
+}
+
+.cartTable th {
+  background: rgba(26, 25, 25, 0.9);
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+.cartTable {
+  text-align: center;
+}
+
+.coupon {
+  margin: 20px 0 0 20px;
+}
+
+.radio {
+  width: 10px;
+}
+
+.cartTotals {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+
+.pmtMethod {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.confirm {
+  width: 300px;
+  text-align: center;
+  font-size: 0.95em;
+  border-radius: 15px;
+}
+
+.goCart {
+  margin-left: 60%;
+  font-size: 1.05em;
+}
+
+.lineQty {
+  width: 40px;
+  text-align: right;
+}
+
+.item {
+  width: 500px;
+}
+
+.cartImg {
+  width: 200px;
+}
+
+.imgColumn {
+  width: 250px;
+}
+
+.shipOptions {
+  width: 15px;
+}
+
+.coup {
+  display: none;
+}
+
+.cartHead {
+  background: none;
+  box-shadow: none;
+  display: inline;
+}
+
+.lineInfo {
+  margin-left: 40px;
+}
+
+#sum {
+  margin-left: 80px;
+}
+
+.orderSum {
+  margin-top: 30px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.cartIcon {
+  position: relative;
+}
+
+#cartH1 {
+  position: relative;
+  margin-left: 45%;
+}
+
+/*---------------------------------------*/
+/*---------CONTACT PAGE SETTINGS---------*/
+/*---------------------------------------*/
+
+.contactForm {
+  width: 200px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.contactLabel {
+  display: inline-block;
+  width: 100px;
+  margin-right: 15px;
+}
+
+#submitForm {
+  margin: 15px;
+  width: 300px;
+  font-weight: bold;
+}
+
+.contact {
+  background: rgba(51, 51, 51, 0.6);
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 10px;
+}
+
+.contactD li {
+  list-style: none;
+}
+
+.contactf a {
+  text-decoration: none;
+  color: #fff;
+  background: rgb(201, 210, 200);
+  width: 100%;
+  margin-left: 2px;
+  padding: 10px 39%;
+}
+
+#contact {
+  margin-bottom: 10px;
+}
+
+/*--------------------------*/
+/*----FOOTER SETTINGS-----*/
+/*--------------------------*/
+
+.footer {
+  background-color: rgb(160, 170, 159);
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
