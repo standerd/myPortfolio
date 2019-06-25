@@ -19,7 +19,7 @@ class App extends Component {
         <h1>This is working</h1>
         <UserInput
           userName={this.state.userName}
-          changed={event => this.changeUserName(event)}
+          changed={this.changeUserName}
         />
         <UserOutput userName={this.state.userName} />
       </div>
