@@ -1,0 +1,30 @@
+.jokeIndex {
+  text-align: center;
+  margin-top: 10%;
+  color: gray;
+}
+
+.joke {
+  border: 3px solid lightblue;
+  width: 600px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.btn {
+  width: 200px;
+  height: 30px;
+  background-color: lightblue;
+  font-weight: bold;
+  outline: none;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  color: darkblue;
+  width: 260px;
+  height: 50px;
+  font-size: 1.05em;
+  cursor: pointer;
+}
