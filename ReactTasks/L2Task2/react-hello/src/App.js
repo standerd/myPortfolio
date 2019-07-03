@@ -4,9 +4,9 @@ import img from "./profile.jpg";
 import Table from "react-bootstrap/Table";
 
 function App() {
-  // Person variable decleration
+  //User variable decleration
 
-  let person = {
+  let user = {
     name: "Dewald",
     surname: "Stander",
     date_of_birth: "1983/06/14",
@@ -34,46 +34,46 @@ function App() {
 
       {/* Load user Profile information into table */}
 
-      <img className="img" src={person.profile_picture} alt="headshot" />
+      <img className="img" src={user.profile_picture} alt="headshot" />
       <Table striped bordered hover>
         <tbody>
           <tr>
             <td>Name:</td>
-            <td>{person.name}</td>
+            <td>{user.name}</td>
           </tr>
           <tr>
             <td>Surname:</td>
-            <td>{person.surname}</td>
+            <td>{user.surname}</td>
           </tr>
           <tr>
             <td>Date of Birth:</td>
-            <td>{person.date_of_birth}</td>
+            <td>{user.date_of_birth}</td>
           </tr>
           <tr>
             <td>Country:</td>
-            <td>{person.country}</td>
+            <td>{user.country}</td>
           </tr>
           <tr>
             <td>E-Mail:</td>
-            <td>{person.email}</td>
+            <td>{user.email}</td>
           </tr>
           <tr>
             <td>Telephone:</td>
-            <td>{person.telephone}</td>
+            <td>{user.telephone}</td>
           </tr>
           <tr>
             <td>Company:</td>
-            <td>{person.company}</td>
+            <td>{user.company}</td>
           </tr>
           <tr>
             <td rowspan="3">Hobbies:</td>
-            <td>{person.interests[0]}</td>
+            <td>{user.interests[0]}</td>
           </tr>
           <tr>
-            <td>{person.interests[1]}</td>
+            <td>{user.interests[1]}</td>
           </tr>
           <tr>
-            <td>{person.interests[2]}</td>
+            <td>{user.interests[2]}</td>
           </tr>
         </tbody>
       </Table>
