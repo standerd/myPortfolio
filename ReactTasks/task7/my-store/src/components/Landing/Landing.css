@@ -1,0 +1,15 @@
+.Landing {
+  padding-bottom: 15px;
+  color: white;
+  text-align: center;
+  background-color: rgb(97, 93, 93);
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Landing p {
+  width: 50%;
+  margin: 0 auto;
+}
