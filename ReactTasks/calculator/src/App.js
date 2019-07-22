@@ -1,11 +1,11 @@
-import React from 'react';
-import UI from '../src/components/UI/UI'
-import './App.css';
+import React from "react";
+import Calculator from "./containers/Calculator";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <UI/>
+      <Calculator />
     </div>
   );
 }

@@ -1,0 +1,36 @@
+html {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.cases {
+  width: 630px;
+  float: left;
+  background-color: green;
+  height: 100vh;
+  margin: 0 5px;
+  padding: 0 10px;
+}
+
+.left {
+  float: left;
+  width: 150px;
+  background-color: pink;
+  height: 100vh;
+}
+
+.right {
+  float: left;
+  width: 150px;
+  background-color: orange;
+  height: 100vh;
+}
+
+.active{
+  opacity: 0.3;
+}
