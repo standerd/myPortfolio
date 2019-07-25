@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./CaseSelection.css";
+import Banker from "../banker/banker";
 
 let leftRem = [
   "1c",
@@ -31,53 +32,120 @@ let rightRem = [
   "R 1 000 00"
 ];
 
+let imgS = [
+  "v1",
+  "v2",
+  "v3",
+  "v4",
+  "v5",
+  "v6",
+  "v7",
+  "v8",
+  "v9",
+  "v10",
+  "v11",
+  "v12",
+  "v13",
+  "v14",
+  "v15",
+  "v16",
+  "v17",
+  "v18",
+  "v19",
+  "v20",
+  "v21",
+  "v22",
+  "v23",
+  "v24"
+];
 
 class CaseSelection extends Component {
-
-componentDidMount(){
-    const array = this.props.randomCases;
-    for (var i = array.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-    }
-    console.log("will mount")
-    console.log(array)
-}
-
   render() {
-
+    let imgDisable = () => null;
     let imgToLoad = this.props.imgRemain.map(imgK => {
       return (
         <img
-          onClick={this.props.imgClicked.bind(this)}
+          onClick={
+            this.props.status[imgK - 1].status === "yourCase"
+              ? imgDisable
+              : this.props.imgClicked.bind(this)
+          }
           data-id={imgK}
           id={imgK}
           key={imgK}
-          className="selected"
+          className={this.props.status[imgK - 1].status}
           src={require("../../images/cases/" + imgK + ".png")}
           alt=""
         />
       );
     });
 
-    let leftList = leftRem.map(key => {
+    let modalImg = (
+      <div>
+        <img
+          className="selectedImg"
+          src={require("../../images/openCases/" +
+            imgS[this.props.imgSource] +
+            ".png")}
+          alt=""
+        />
+      </div>
+    );
+
+    let banker = (
+      <Banker
+        decline={this.props.decline}
+        offer={this.props.offer}
+        casesToOpen={this.props.casesToOpen}
+        change={this.props.handleSubmit}
+      />
+    );
+
+    let modal = () => {
+      if (this.props.modal === 1) {
+        return imgToLoad;
+      } else if (this.props.modal === 2) {
+        return modalImg;
+      } else if (this.props.modal === 3) {
+        return banker;
+      }
+    };
+
+    let header = () => {
+      if (this.props.header) {
+        return <h1 className="message">PLEASE SELECT YOUR CASE</h1>;
+      } else {
+        if (this.props.caseCount === 1) {
+          return (
+            <h1 className="message">
+              PLEASE SELECT {this.props.caseCount} CASE
+            </h1>
+          );
+        } else {
+          return (
+            <h1 className="message">
+              PLEASE SELECT {this.props.caseCount} CASES
+            </h1>
+          );
+        }
+      }
+    };
+
+    let leftList = leftRem.map((key, i) => {
       return (
-        <li key={key} className="caseVal">
+        <li key={i} className={this.props.status[i].second}>
           {key}
         </li>
       );
     });
 
-    let rightList = rightRem.map(key => {
+    let rightList = rightRem.map((key, i) => {
       return (
-        <li key={key} className="caseVal">
+        <li key={key} className={this.props.status[i + 12].second}>
           {key}
         </li>
       );
     });
-
 
     return (
       <div className="casesMain">
@@ -86,9 +154,10 @@ componentDidMount(){
         </div>
 
         <div className="cases">
-          <h1 className="message">PLEASE SELECT YOUR CASE</h1>
-          {imgToLoad}
+          {header()}
+          {modal()}
         </div>
+
         <div className="right">
           <ul>{rightList}</ul>
         </div>

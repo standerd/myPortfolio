@@ -1,34 +1,69 @@
 .landing {
   background-image: url(../../images/background.png);
   height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
 
-button{
-    background-color: rgb(230, 217, 42);
-    width: 250px;
-    height: 80px;
-    border: 5px solid rgb(218, 180, 14);
-    border-radius:5px;
-    font-size: 1.2em;
-    color:black;
-    font-weight: bold;
-    margin-top: 50%;
-    margin-left: 38%;
-    box-shadow: 5px 5px 20px rgb(250, 247, 95);
-    transition: all 1s;
+button {
+  background-color: rgb(230, 217, 42);
+  width: 250px;
+  height: 80px;
+  border: 5px solid rgb(218, 180, 14);
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: black;
+  font-weight: bold;
+  margin-top: 15%;
+  margin-left: 41%;
+  box-shadow: 5px 5px 20px rgb(250, 247, 95);
+  transition: all 1s;
 }
 
-button:hover{
-    cursor: pointer;
-    transform: scale(1.1)
-
+.exit{
+  margin-top: 0;
+  margin-bottom: 2%;
+  margin-left: 35%;
 }
 
-h1{
-    padding-top: 85px;
-    margin-left: 45%;
-    font-size: 3.3em;
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+h1 {
+  padding-top: 85px;
+  margin-left: 45%;
+  font-size: 3.3em;
+}
+
+.help{
+  margin-top: 2%;
+  margin-right: 1%;
+  margin-left: 90%;
+  width: 100px;
+  height: 50px;
+}
+
+.helpScreen{
+  width: 70%;
+  height: 70%;
+  color: white;
+  background-color: rgba(1,1,1,0.9);
+  margin: 0 auto;
+  text-align: left;
+  font-weight: bold;
+}
+
+.rulesUL li{
+  background-color: rgba(1,1,1,0.0);
+  padding: 0;
+  border: none;
+  color: white;
+  margin: 2% 0;
+  line-height: 1.2em;
+  height:100%;
+  font-weight: bold;
 }

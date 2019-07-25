@@ -1,73 +1,106 @@
+/* formatting for the suitcase images div */
+
 .cases {
-  width: 630px;
+  width: 65%;
   float: left;
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0 auto;
-  padding: 15px 10px;
+  padding: 1% 1%;
   text-align: center;
 }
 
-.message{
-    color: white;
-    text-align: center;
-    font-size: 1.9em;
-    margin: 5px auto;
-    padding: 20px;
-    background-color: rgba(1,1,1,.8);
+/* formatting for the header component */
+.message {
+  color: white;
+  text-align: center;
+  font-size: 1.9em;
+  margin: 1% auto;
+  padding: 1.5%;
+  background-color: rgba(1, 1, 1, 0.8);
 }
 
+/* formatting for the suitcase images */
 img {
-  width: 150px;
-  margin-left: 5px;
-  height:110px;
+  width: 24%;
+  margin-left: 1%;
+  height: 14%;
   transition: all 1s;
 }
 
-img:hover{
-    cursor: pointer;
-    transform: scale(1.1);
+img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
+
+/* formatting for the left and right UL displays */
 
 .left {
   float: left;
-  width: 150px;
+  width: 15%;
   height: 100vh;
   border: 3px solid black;
-  background-color: rgba(1,1,1,0.6);
+  background-color: rgba(1, 1, 1, 0.6);
   text-align: center;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 1% 0;
 }
 
 .right {
   float: left;
-  width: 150px;
+  width: 15%;
   border: 3px solid black;
-  background-color: rgba(1,1,1,0.6);
+  background-color: rgba(1, 1, 1, 0.6);
   height: 100vh;
-  padding: 15px 0;
+  padding: 1% 0;
 }
 
-.active {
-  opacity: 0.3;
+li {
+  width: 90%;
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 2.5rem;
+  padding-top: 8%;
+  margin-bottom: 4%;
 }
 
-.caseVal{
-    width: 120px;
-    background-color: yellow;
-    border: 1px solid black;
-    border-radius: 3px;
-    height: 35px;
-    padding-top: 15px;
-    margin-bottom: 10px;
+.left ul,
+.right ul {
+  list-style: none;
+  padding-left: 10%;
+  text-align: center;
 }
 
-.left ul, .right ul{
-    list-style: none;
-    padding-left: 15px;
-    text-align: center;
+/* image and LI display when having been clicked */
+.yourCase {
+  opacity: 0.5;
 }
 
-.yourCase{
-    opacity: .5;
+/* modal image showing open case */
+.selectedImg {
+  width: 70%;
+  margin-top: 10%;
+  height: 40%;
+}
+
+/* banker component style settings */
+
+.banker {
+  color: white;
+  background: rgba(1, 1, 1, 0.6);
+  padding-left: 0px;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+}
+
+.banker h2 {
+  margin-left: 1%;
+  font-size: 2.5rem;
+  padding-top: 10%;
+}
+
+.banker button {
+  margin-top: 5%;
+  margin-left: 5%;
 }
